@@ -1,0 +1,386 @@
+[
+  {
+    "id": "transport-clear-agree",
+    "questionId": "transport",
+    "category": "clear_agree",
+    "speech": "通院や買い物に必要な人がいるので、公共交通への行政支援は今より増やすべきだと思います。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "agree",
+    "expectedBasis": "clear",
+    "acceptableAnswers": [
+      "agree"
+    ],
+    "allowClarification": false,
+    "tolerance": "期待enumと一致し、確認質問・説明要求・次問移動を先行させない。",
+    "notes": "明示的な賛成。強さを勝手に strongly_agree へ上げない。"
+  },
+  {
+    "id": "childcare-clear-agree",
+    "questionId": "childcare",
+    "category": "clear_agree",
+    "speech": "所得に関係なく、子育ての費用支援を広く届けることに賛成です。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "agree",
+    "expectedBasis": "clear",
+    "acceptableAnswers": [
+      "agree"
+    ],
+    "allowClarification": false,
+    "tolerance": "期待enumと一致し、確認質問・説明要求・次問移動を先行させない。",
+    "notes": "普遍的な支援への明示的な賛成。"
+  },
+  {
+    "id": "disaster-clear-strong-agree",
+    "questionId": "disaster",
+    "category": "clear_agree",
+    "speech": "新しい施設を増やすより、今ある道路や橋の点検と修繕を強く優先すべきです。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "strongly_agree",
+    "expectedBasis": "clear",
+    "acceptableAnswers": [
+      "strongly_agree"
+    ],
+    "allowClarification": false,
+    "tolerance": "strongly_agreeのみ許容。明示した強さを弱めず、確認質問・次問移動を先行させない。",
+    "notes": "強い意思を明示しているため strongly_agree。"
+  },
+  {
+    "id": "transport-clear-strong-disagree",
+    "questionId": "transport",
+    "category": "clear_disagree",
+    "speech": "公共交通への行政支援を今より増やすことには、はっきり強く反対です。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "strongly_disagree",
+    "expectedBasis": "clear",
+    "acceptableAnswers": [
+      "strongly_disagree"
+    ],
+    "allowClarification": false,
+    "tolerance": "strongly_disagreeのみ許容。明示された強さを弱めず、確認質問や次問移動を先行させない。",
+    "notes": "強い反対を明示した例。回答体系の両端を評価する。"
+  },
+  {
+    "id": "childcare-clear-disagree",
+    "questionId": "childcare",
+    "category": "clear_disagree",
+    "speech": "所得にかかわらず一律に広げるより、負担の大きい家庭に集中するほうがよいです。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "disagree",
+    "expectedBasis": "clear",
+    "acceptableAnswers": [
+      "disagree"
+    ],
+    "allowClarification": false,
+    "tolerance": "disagreeのみ許容。回答拒否・neutralへの置換や確認質問は不可。",
+    "notes": "広く届ける案への明確な反対。"
+  },
+  {
+    "id": "disaster-clear-disagree",
+    "questionId": "disaster",
+    "category": "clear_disagree",
+    "speech": "今ある施設の修繕よりも、新しい施設をつくることを優先したいです。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "disagree",
+    "expectedBasis": "clear",
+    "acceptableAnswers": [
+      "disagree"
+    ],
+    "allowClarification": false,
+    "tolerance": "disagreeのみ許容。回答拒否・neutralへの置換や確認質問は不可。",
+    "notes": "修繕優先への明確な反対。"
+  },
+  {
+    "id": "transport-conditional",
+    "questionId": "transport",
+    "category": "conditional",
+    "speech": "通院に必要な路線への支援を今より増やすことには賛成です。ただし、利用者の少ない路線まで一律に増やす必要はありません。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "agree",
+    "expectedBasis": "conditional",
+    "acceptableAnswers": [
+      "agree"
+    ],
+    "allowClarification": false,
+    "tolerance": "agreeのみ許容。条件部分を理由にneutral以下へ弱めず、確認質問・次問移動は不可。",
+    "notes": "条件付きで支援増を認めている。税負担への懸念だけで反対にしない。"
+  },
+  {
+    "id": "childcare-conditional",
+    "questionId": "childcare",
+    "category": "conditional",
+    "speech": "所得にかかわらず広く届ける案に賛成です。ただし、同じ予算なら負担の大きい家庭に厚くする配慮も必要です。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "agree",
+    "expectedBasis": "conditional",
+    "acceptableAnswers": [
+      "agree"
+    ],
+    "allowClarification": false,
+    "tolerance": "agreeのみ許容。条件部分を理由にneutral以下へ弱めず、確認質問・次問移動は不可。",
+    "notes": "普遍支援への賛成を主文にした条件付き意見。"
+  },
+  {
+    "id": "disaster-conditional",
+    "questionId": "disaster",
+    "category": "conditional",
+    "speech": "今ある施設の点検と修繕を優先することに賛成です。ただし、安全上必要な新設まで止める必要はありません。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "agree",
+    "expectedBasis": "conditional",
+    "acceptableAnswers": [
+      "agree"
+    ],
+    "allowClarification": false,
+    "tolerance": "agreeのみ許容。条件部分を理由にneutral以下へ弱めず、確認質問・次問移動は不可。",
+    "notes": "修繕優先を主文にした条件付き意見。"
+  },
+  {
+    "id": "transport-balanced-neutral",
+    "questionId": "transport",
+    "category": "balanced_neutral",
+    "speech": "移動手段を守ることと費用を抑えることの両方の論点を理解しています。賛否は同程度なので、支援を増やす案には中立を選びます。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "neutral",
+    "expectedBasis": "balanced",
+    "acceptableAnswers": [
+      "neutral"
+    ],
+    "allowClarification": false,
+    "tolerance": "neutralのみ許容。知識不足扱いのskip、賛否への決めつけ、確認質問は不可。",
+    "notes": "両面を理解した上で判断を中間に置いている。"
+  },
+  {
+    "id": "childcare-balanced-neutral",
+    "questionId": "childcare",
+    "category": "balanced_neutral",
+    "speech": "広く支える考えと負担の大きい家庭に集中する考えの両方を理解しています。どちらにも同じくらい理由があるので、中立を選びます。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "neutral",
+    "expectedBasis": "balanced",
+    "acceptableAnswers": [
+      "neutral"
+    ],
+    "allowClarification": false,
+    "tolerance": "neutralのみ許容。知識不足扱いのskip、賛否への決めつけ、確認質問は不可。",
+    "notes": "知識不足ではなく、両論を理解した上で拮抗している。"
+  },
+  {
+    "id": "disaster-balanced-neutral",
+    "questionId": "disaster",
+    "category": "balanced_neutral",
+    "speech": "修繕と新設の必要性が違うこと、両方に利点があることを理解しています。賛否が同程度なので、修繕優先には中立を選びます。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "neutral",
+    "expectedBasis": "balanced",
+    "acceptableAnswers": [
+      "neutral"
+    ],
+    "allowClarification": false,
+    "tolerance": "neutralのみ許容。知識不足扱いのskip、賛否への決めつけ、確認質問は不可。",
+    "notes": "両方の必要性を認めた中立。"
+  },
+  {
+    "id": "transport-insufficient-knowledge",
+    "questionId": "transport",
+    "category": "insufficient_knowledge",
+    "speech": "制度や費用のことをよく知らないので、判断できません。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "skip",
+    "expectedBasis": "insufficient_knowledge",
+    "acceptableAnswers": [
+      "skip"
+    ],
+    "allowClarification": false,
+    "tolerance": "skipのみ許容。neutral化、説得、不要な確認質問は不可。",
+    "notes": "知識不足を neutral に変換しない。"
+  },
+  {
+    "id": "childcare-insufficient-knowledge",
+    "questionId": "childcare",
+    "category": "insufficient_knowledge",
+    "speech": "児童手当や県の支援の違いが分からないので、今回は見送ります。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "skip",
+    "expectedBasis": "insufficient_knowledge",
+    "acceptableAnswers": [
+      "skip"
+    ],
+    "allowClarification": false,
+    "tolerance": "skipのみ許容。neutral化、説得、不要な確認質問は不可。",
+    "notes": "制度知識の不足と見送りを明示。"
+  },
+  {
+    "id": "disaster-insufficient-knowledge",
+    "questionId": "disaster",
+    "category": "insufficient_knowledge",
+    "speech": "インフラの専門的な事情を知らないので、今は答えを決められません。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "skip",
+    "expectedBasis": "insufficient_knowledge",
+    "acceptableAnswers": [
+      "skip"
+    ],
+    "allowClarification": false,
+    "tolerance": "skipのみ許容。neutral化、説得、不要な確認質問は不可。",
+    "notes": "専門知識不足を neutral にしない。"
+  },
+  {
+    "id": "transport-declined",
+    "questionId": "transport",
+    "category": "declined",
+    "speech": "この話題には答えたくありません。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "skip",
+    "expectedBasis": "declined",
+    "acceptableAnswers": [
+      "skip"
+    ],
+    "allowClarification": false,
+    "tolerance": "skipのみ許容。理由の追及、説得、確認質問は不可。",
+    "notes": "回答拒否を尊重し、理由を聞き返さない。"
+  },
+  {
+    "id": "childcare-declined",
+    "questionId": "childcare",
+    "category": "declined",
+    "speech": "子育て支援については、今回は回答しません。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "skip",
+    "expectedBasis": "declined",
+    "acceptableAnswers": [
+      "skip"
+    ],
+    "allowClarification": false,
+    "tolerance": "skipのみ許容。理由の追及、説得、確認質問は不可。",
+    "notes": "回答拒否を知識不足や中立に置き換えない。"
+  },
+  {
+    "id": "disaster-declined",
+    "questionId": "disaster",
+    "category": "declined",
+    "speech": "今はこの質問に答える気分ではないので、見送ります。",
+    "expectedAction": "suggest_answer",
+    "expectedAnswer": "skip",
+    "expectedBasis": "declined",
+    "acceptableAnswers": [
+      "skip"
+    ],
+    "allowClarification": false,
+    "tolerance": "skipのみ許容。理由の追及、説得、確認質問は不可。",
+    "notes": "見送りをそのまま候補にする。"
+  },
+  {
+    "id": "transport-ambiguous",
+    "questionId": "transport",
+    "category": "ambiguous",
+    "speech": "公共交通は大事だと思いますが、増やすのはどうでしょう。",
+    "expectedAction": "ask_clarification",
+    "expectedAnswer": null,
+    "expectedBasis": null,
+    "acceptableAnswers": [],
+    "allowClarification": true,
+    "expectedClarification": "支援を今より増やすことには、賛成・反対のどちらに近いですか。",
+    "tolerance": "確認文の言い換えは可。160文字以内で、支援増への賛否だけを一度尋ねる。先に回答候補を出さない。",
+    "followUp": {
+      "speech": "支援を今より増やすことには賛成です。",
+      "expectedAction": "suggest_answer",
+      "expectedAnswer": "agree",
+      "expectedBasis": "clear",
+      "acceptableAnswers": [
+        "agree"
+      ],
+      "tolerance": "agreeのみ許容。確認後の追加入力を別の質問へ逸らさず、追加確認や次問移動をしない。"
+    },
+    "notes": "賛成の対象が公共交通の重要性なのか、支援増なのか曖昧。確認は短く1回だけ。"
+  },
+  {
+    "id": "childcare-ambiguous",
+    "questionId": "childcare",
+    "category": "ambiguous",
+    "speech": "子育て支援は必要だと思います。",
+    "expectedAction": "ask_clarification",
+    "expectedAnswer": null,
+    "expectedBasis": null,
+    "acceptableAnswers": [],
+    "allowClarification": true,
+    "expectedClarification": "所得に関係なく広く届ける案と、負担の大きい家庭に集中する案では、どちらに近いですか。",
+    "tolerance": "確認文の言い換えは可。二つの配分案のどちらに近いかを一度だけ尋ねる。回答候補・次問移動はしない。",
+    "followUp": {
+      "speech": "負担の大きい家庭に絞るより、所得にかかわらず広く届ける案に近いです。",
+      "expectedAction": "suggest_answer",
+      "expectedAnswer": "agree",
+      "expectedBasis": "clear",
+      "acceptableAnswers": [
+        "agree"
+      ],
+      "tolerance": "agreeのみ許容。確認後の追加入力を正しく反映し、追加確認や次問移動をしない。"
+    },
+    "notes": "質問の二つの配分案のどちらを支持するか不足。"
+  },
+  {
+    "id": "disaster-ambiguous",
+    "questionId": "disaster",
+    "category": "ambiguous",
+    "speech": "直すのも新しく作るのも大事です。",
+    "expectedAction": "ask_clarification",
+    "expectedAnswer": null,
+    "expectedBasis": null,
+    "acceptableAnswers": [],
+    "allowClarification": true,
+    "expectedClarification": "今ある施設の点検・修繕と新設では、どちらを優先したいですか。",
+    "tolerance": "確認文の言い換えは可。修繕優先か新設優先かを一度だけ尋ねる。なお不明のままならskip候補を許容する。",
+    "followUp": {
+      "speech": "今ある施設の点検と修繕を優先したいです。",
+      "expectedAction": "suggest_answer",
+      "expectedAnswer": "agree",
+      "expectedBasis": "clear",
+      "acceptableAnswers": [
+        "agree"
+      ],
+      "tolerance": "agreeのみ許容。確認後の追加入力を正しく反映し、追加確認や次問移動をしない。"
+    },
+    "notes": "両方の必要性だけで優先順位が不明。確認後も不明ならskip候補。"
+  },
+  {
+    "id": "transport-explain-only",
+    "questionId": "transport",
+    "category": "explanation_only",
+    "speech": "この質問が何を聞いているのか、賛成と慎重の論点も説明してください。まだ回答はしません。",
+    "expectedAction": "show_sources_and_explain",
+    "expectedAnswer": null,
+    "expectedBasis": null,
+    "acceptableAnswers": [],
+    "allowClarification": false,
+    "expectedSourceShown": true,
+    "tolerance": "資料表示、賛成・慎重双方の要約、資料の限界があれば説明文は言い換え可。回答候補・確定・次問移動・確認質問は不可。",
+    "notes": "資料表示と両論の説明を行う。回答候補・確定・次問移動はしない。"
+  },
+  {
+    "id": "childcare-explain-only",
+    "questionId": "childcare",
+    "category": "explanation_only",
+    "speech": "子育て支援の二つの考え方と、参考にした資料を先に教えてください。回答は後で考えます。",
+    "expectedAction": "show_sources_and_explain",
+    "expectedAnswer": null,
+    "expectedBasis": null,
+    "acceptableAnswers": [],
+    "allowClarification": false,
+    "expectedSourceShown": true,
+    "tolerance": "こども家庭庁資料の範囲と限界を含む説明なら可。回答候補・確定・次問移動・不要な確認質問は不可。",
+    "notes": "こども家庭庁資料の範囲と、この設問を直接立証しない限界を説明する。"
+  },
+  {
+    "id": "disaster-explain-only",
+    "questionId": "disaster",
+    "category": "explanation_only",
+    "speech": "点検や修繕を優先する場合の意味を、反対側の考えも含めて説明してください。今は答えません。",
+    "expectedAction": "show_sources_and_explain",
+    "expectedAnswer": null,
+    "expectedBasis": null,
+    "acceptableAnswers": [],
+    "allowClarification": false,
+    "expectedSourceShown": true,
+    "tolerance": "国土交通省資料の役割と限界、賛成・慎重双方の説明なら可。回答候補・確定・次問移動・確認質問は不可。",
+    "notes": "国土交通省資料の役割と限界を示し、説明を回答として記録しない。"
+  }
+]

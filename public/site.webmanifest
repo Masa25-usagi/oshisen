@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "オシセン｜政策で出会い、人柄で興味を深める",
+  "short_name": "オシセン",
+  "description": "政策から候補者を知る、オシセンの体験用プロトタイプ。",
+  "lang": "ja",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#fffdf7",
+  "theme_color": "#fffdf7",
+  "icons": [
+    {
+      "src": "/icon-192.png?v=logo-2",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png?v=logo-2",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
