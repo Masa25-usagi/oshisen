@@ -23,7 +23,9 @@ test("Gemini 3.8 waits for tool acceptance and omits unsupported legacy options"
     /thinkingConfig|proactiveAudio|enableAffectiveDialog/,
   );
   assert.ok(
-    voiceConfig({}).models.some((model) => model.id === "gemini-3.8-live"),
+    voiceConfig({ NODE_ENV: "test" }).models.some(
+      (model) => model.id === "gemini-3.8-live",
+    ),
   );
 });
 const body = {
