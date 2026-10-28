@@ -43,6 +43,15 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 650;
+  transition:
+    background-color var(--duration-fast),
+    border-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
+}
+.choice:hover:not(:has(input:disabled)) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 .choice input {
   width: 19px;
@@ -161,6 +170,15 @@
   font-size: 13px;
   font-weight: 650;
   box-shadow: 2px 2px 0 var(--ink);
+  transition:
+    color var(--duration-fast),
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
+}
+.filter:hover:not([aria-pressed="true"]) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 .filter[aria-pressed="true"] {
   color: white;

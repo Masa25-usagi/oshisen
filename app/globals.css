@@ -5,6 +5,38 @@
   --muted: #666;
   --line: #d8d7d2;
   --blue: #2455ff;
+  /* 状態色 */
+  --blue-strong: #1742d8;
+  --danger: #9b3026;
+  /* 余白スケール (8px ベース) */
+  --space-3xs: 4px;
+  --space-2xs: 8px;
+  --space-xs: 12px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  /* 角丸 */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 999px;
+  /* 影 (pop-theme.css でハードシャドウに上書き) */
+  --shadow-xs: 0 1px 2px rgb(17 17 17 / 0.08);
+  --shadow-sm: 0 2px 6px rgb(17 17 17 / 0.08);
+  --shadow-md: 0 6px 18px rgb(17 17 17 / 0.1);
+  /* モーション */
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --easing-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* フォーカスリング */
+  --focus-ring-width: 3px;
+  --focus-ring-color: var(--blue);
+  --focus-ring-offset: 5px;
 }
 * {
   box-sizing: border-box;
@@ -59,8 +91,12 @@ a:hover {
   text-decoration: underline;
 }
 :focus-visible {
-  outline: 3px solid var(--blue);
-  outline-offset: 5px;
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
 }
 h1,
 h2,
@@ -170,8 +206,10 @@ img {
   font-weight: 650;
   line-height: 1.7;
   transition:
-    background-color 0.18s,
-    border-color 0.18s;
+    background-color var(--duration-fast),
+    border-color var(--duration-fast),
+    box-shadow var(--duration-fast),
+    transform var(--duration-fast);
 }
 .button:hover {
   text-decoration: none;
@@ -181,7 +219,7 @@ img {
   color: white;
 }
 .primary:hover:not(:disabled) {
-  background: #1742d8;
+  background: var(--blue-strong);
 }
 .secondary {
   border-color: var(--line);
@@ -207,6 +245,9 @@ img {
   font-weight: 650;
   border-bottom: 1px solid var(--ink);
   line-height: 1.7;
+  transition:
+    color var(--duration-fast),
+    border-color var(--duration-fast);
 }
 .text-link:hover {
   color: var(--blue);
@@ -642,7 +683,7 @@ img {
   display: block;
   height: 100%;
   background: var(--blue);
-  transition: width 0.2s;
+  transition: width var(--duration-base) var(--easing-out);
 }
 .question-content {
   margin-top: 35px;
@@ -674,6 +715,11 @@ details summary {
   color: var(--muted);
   font-size: 12px;
   padding-block: 10px;
+  border-radius: var(--radius-xs);
+  transition: color var(--duration-fast);
+}
+details summary:hover {
+  color: var(--ink);
 }
 details p {
   padding: 12px 16px;
@@ -705,8 +751,10 @@ details p {
   font-size: 16px;
   line-height: 1.6;
   transition:
-    border-color 0.18s,
-    background 0.18s;
+    border-color var(--duration-fast),
+    background var(--duration-fast),
+    box-shadow var(--duration-fast),
+    transform var(--duration-fast);
   position: relative;
 }
 .answer-option:hover {
@@ -733,6 +781,9 @@ details p {
   height: 18px;
   border: 1px solid #aaa;
   border-radius: 50%;
+  transition:
+    border-color var(--duration-fast),
+    border-width var(--duration-fast);
 }
 .selected .radio-mark {
   border: 5px solid var(--blue);
@@ -744,7 +795,7 @@ details p {
   white-space: nowrap;
 }
 .form-message {
-  color: #9b3026;
+  color: var(--danger);
   font-size: 13px;
   min-height: 18px;
   margin-top: 10px;

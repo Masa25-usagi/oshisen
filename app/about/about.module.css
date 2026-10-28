@@ -22,11 +22,17 @@ main.page {
   background: white;
   font-size: 13px;
   font-weight: 750;
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .jumpLinks a:hover {
   text-decoration: none;
   background: var(--yellow-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .operationRoles {

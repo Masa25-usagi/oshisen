@@ -363,6 +363,10 @@
   border-radius: 22px;
   background: var(--blue-soft);
   box-shadow: var(--shadow-pop);
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .home :global(.explore-grid > a:nth-child(2)) {
@@ -377,6 +381,8 @@
   text-decoration: none;
   outline: 2px solid var(--blue);
   outline-offset: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
 }
 
 .home :global(.explore-grid .small-index) {
@@ -504,11 +510,17 @@
   box-shadow: var(--shadow-pop);
   font-size: 18px;
   font-weight: 800;
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .home :global(.entrance-link:hover) {
   text-decoration: none;
   background: var(--yellow-soft);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
 }
 
 .home :global(.entrance-link span) {

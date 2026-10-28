@@ -27,11 +27,18 @@
   background: var(--white);
   font-size: 14px;
   font-weight: 650;
+  transition:
+    color var(--duration-fast),
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .themeLink:hover {
   text-decoration: none;
   background: var(--yellow-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 .themeLink[aria-current="page"] {
@@ -188,6 +195,14 @@
   background: var(--white);
   padding: 20px;
   margin-top: 12px;
+  transition:
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
+}
+
+.candidate:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 .candidate h4 {

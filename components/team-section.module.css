@@ -228,11 +228,17 @@
   color: var(--blue);
   font-size: 14px;
   font-weight: 800;
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .memberLink:hover {
   text-decoration: none;
   background: var(--yellow-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 var(--blue);
 }
 
 .factNote {
@@ -372,10 +378,16 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 800;
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .moreQuestions > summary:hover {
   background: var(--yellow-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .moreLabel {

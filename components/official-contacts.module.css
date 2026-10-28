@@ -30,6 +30,11 @@
   color: var(--ink);
   background: white;
   box-shadow: 3px 3px 0 var(--yellow);
+  transition:
+    background-color var(--duration-fast),
+    border-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .socialLinks a[data-channel="instagram"] {
@@ -40,6 +45,8 @@
   text-decoration: none;
   border-color: var(--blue);
   background: var(--yellow-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--yellow);
 }
 
 .socialLinks strong {
@@ -81,10 +88,16 @@
   color: var(--ink);
   font-size: 13px;
   font-weight: 750;
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 
 .copyButton:hover:not(:disabled) {
   background: var(--yellow-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .copyStatus {
