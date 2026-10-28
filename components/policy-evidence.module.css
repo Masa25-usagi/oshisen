@@ -15,6 +15,8 @@
   font-size: 13px;
   line-height: 1.8;
   font-weight: 650;
+  border-radius: 14px;
+  transition: color var(--duration-fast);
 }
 .summary::marker {
   color: var(--blue);
@@ -97,10 +99,16 @@ blockquote.statement {
   line-height: 1.9;
   text-decoration: underline;
   text-underline-offset: 4px;
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
 }
 .sourceLink:hover {
   text-decoration-thickness: 2px;
   background: var(--yellow-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 .video {
   margin-top: 20px;

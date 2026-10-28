@@ -18,6 +18,16 @@
   background: var(--white);
   text-align: left;
   font-weight: 650;
+  transition:
+    color var(--duration-fast),
+    background-color var(--duration-fast),
+    border-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
+}
+.actionButtons button:hover:not(:disabled):not([aria-pressed="true"]) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 .actionButtons button[aria-pressed="true"] {
   border-color: var(--blue);
@@ -84,6 +94,14 @@
   border-radius: 999px;
   box-shadow: 2px 2px 0 var(--ink);
   font-weight: 650;
+  transition:
+    background-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
+}
+.selectedNames button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 .selectedNames button:hover {
   background: var(--pink-soft);
@@ -145,6 +163,16 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  transition:
+    color var(--duration-fast),
+    background-color var(--duration-fast),
+    border-color var(--duration-fast),
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
+}
+.themeChoices label:hover:not(:has(input:checked)) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 .themeChoices label:has(input:checked) {
   border-color: var(--blue);
